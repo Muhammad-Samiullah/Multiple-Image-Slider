@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 65%;
+            margin: auto;
+        }
+
+        .avax__photo__slider {
+  display: flex !important;
+  margin-top: 20px;
+  width: 100%;
+  overflow: auto;
+}
+
+.avax__photo__image {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.avax__photo__image img {
+  width: 165px !important;
+  height: 82px !important;
+}
+
+.avax__photo__image:nth-child(1) {
+  margin-left: 0;
+}
+.avax__photo__image:last-child {
+  margin-right: 0;
+}
+
+.right__arrow {
+  float: right;
+  margin-bottom: 0px;
+  cursor: pointer;
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  top: 50px;
+  left: -5px;
+}
+
+.left__arrow {
+  float: left;
+  /* margin-top: 5px; */
+  cursor: pointer;
+  background: white;
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  top: 50px;
+  right: -5px;
+}
+
+.avax__photo__slider::-webkit-scrollbar {
+  display: none;
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left__arrow">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="right__arrow">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+
+          <div class="avax__photo__slider">
+            <div class="avax__photo__image">
+              <img src="./images/avax__image/image_2022_01_03T10_59_15_981Z.png" alt="">
+              <h5>Spotlight</h5>
+            </div>
+            <div class="avax__photo__image">
+              <img src="./images/avax__image/image_2022_01_03T10_59_15_981Z.png" alt="">
+              <h5>Prime</h5>
+            </div>
+            <div class="avax__photo__image">
+              <img src="./images/avax__image/image_2022_01_03T10_59_15_981Z.png" alt="">
+              <h5>Spotlight</h5>
+            </div>
+            <div class="avax__photo__image">
+              <img src="./images/avax__image/image_2022_01_03T10_59_15_981Z.png" alt="">
+              <h5>Edge</h5>
+            </div>
+            <div class="avax__photo__image">
+              <img src="./images/avax__image/image_2022_01_03T10_59_15_981Z.png" alt="">
+              <h5>Luminate</h5>
+            </div>
+            <div class="avax__photo__image">
+              <img src="./images/avax__image/image_2022_01_03T10_59_15_981Z.png" alt="">
+              <h5>Luminate</h5>
+            </div>
+            <div class="avax__photo__image">
+              <img src="./images/avax__image/image_2022_01_03T10_59_15_981Z.png" alt="">
+              <h5>Luminate</h5>
+            </div>
+            <div class="avax__photo__image">
+              <img src="./images/avax__image/image_2022_01_03T10_59_15_981Z.png" alt="">
+              <h5>Luminate</h5>
+            </div>
+            <div class="avax__photo__image">
+              <img src="./images/avax__image/image_2022_01_03T10_59_15_981Z.png" alt="">
+              <h5>Luminate</h5>
+            </div>
+            <div class="avax__photo__image">
+              <img src="./images/avax__image/image_2022_01_03T10_59_15_981Z.png" alt="">
+              <h5>Luminate</h5>
+            </div>
+          </div>
+    </div>
+    
+
+    <script>
+        let i=1;
+        let images = document.querySelectorAll('.avax__photo__image');
+          document.querySelector('.right__arrow').onclick = function(){
+            let interval = setInterval(() => {
+              document.querySelector('.avax__photo__slider').scrollLeft += 2;
+              i += 1;
+              if(i >= 92) {
+                clearInterval(interval);
+                i = 0;
+              }
+            }, 1);
+          };
+  
+          document.querySelector('.left__arrow').onclick = function(){
+            let interval = setInterval(() => {
+              document.querySelector('.avax__photo__slider').scrollLeft -= 2;
+              i += 1;
+              if(i >= 92) {
+                clearInterval(interval);
+                i = 0;
+              }
+            }, 1);
+          };
+  
+  
+  
+      </script>
+</body>
+</html>
